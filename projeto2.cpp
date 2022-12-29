@@ -33,9 +33,9 @@ int main() {
         edges.push_back(newEdge);
     }
 
-    // Sort the edges in increasing order by weight
+    // Sort the edges in decreasing order by weight
     sort(edges.begin(), edges.end(), [](const auto& e1, const auto& e2) {
-        return e1.w < e2.w;
+        return e1.w > e2.w;
     });
 
     for (int i = 0; i < n; i++) {
