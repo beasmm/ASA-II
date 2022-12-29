@@ -12,7 +12,7 @@ struct Edge {
 
 vector<Edge> edges;
 
-vector<int> p (m);
+vector<int> p (n);
 
 
 int find(int x) {
@@ -39,7 +39,7 @@ int main() {
     });
 
     for (int i = 0; i < n; i++) {
-        p[i] = i;
+        p.push_back(i);
     }
 
     for (int i = 0; i < m; i++) {
