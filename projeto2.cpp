@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include <map>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -13,7 +13,7 @@ struct Edge {
 
 vector<Edge> edges;
 
-map<int, int> p;
+unordered_map<int, int> p;
 
 int find(int x) {
     if (p[x] != x) 
