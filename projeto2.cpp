@@ -34,7 +34,7 @@ int main() {
     }
 
     // Sort the edges in decreasing order by weight
-    sort(edges.begin(), edges.end(), [](const auto& e1, const auto& e2) {
+    sort(edges.begin(), edges.end(), [](Edge const e1, Edge const e2) {
         return e1.w > e2.w;
     });
 
