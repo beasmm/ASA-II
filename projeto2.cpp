@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <map>
 #include <vector>
 
 using namespace std;
@@ -12,15 +13,13 @@ struct Edge {
 
 vector<Edge> edges;
 
-vector<int> p (n);
-
+map<int, int> p;
 
 int find(int x) {
-    if (x != p[x]) 
+    if (p[x] != x) 
         p[x] = find(p[x]);
     return p[x];
 }
-
 
 int main() {
     int total = 0;
@@ -34,12 +33,12 @@ int main() {
     }
 
     // Sort the edges in decreasing order by weight
-    sort(edges.begin(), edges.end(), [](Edge const e1, Edge const e2) {
+    sort(edges.begin(), edges.end(), [](Edge const e1, Edge const & e2) {
         return e1.w > e2.w;
     });
 
     for (int i = 0; i < n; i++) {
-        p.push_back(i);
+        p[i] = i;
     }
 
     for (int i = 0; i < m; i++) {
