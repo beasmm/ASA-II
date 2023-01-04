@@ -23,7 +23,7 @@ int find(int x) {
 
 int main() {
     int total = 0;
-    cin >> n >> m;
+    scanf("%d %d", &n, &m);
 
     // Loop to read the edges
     for (int i = 0; i < m; i++) {
